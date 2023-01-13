@@ -30,21 +30,42 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         if(canMove) {
             // If movement input is not 0, try to move
-            if(movementInput != Vector2.zero){
-                
+            if (movementInput != Vector2.zero)
+            {
+
                 bool success = TryMove(movementInput);
 
-                if(!success) {
+                if (!success)
+                {
                     success = TryMove(new Vector2(movementInput.x, 0));
                 }
 
-                if(!success) {
+                if (!success)
+                {
                     success = TryMove(new Vector2(0, movementInput.y));
+                    if (movementInput.y > 0)
+                    {
+                        animator.SetBool("isMovingUp", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("isMovingUp", false);
+                    }
+                    if (movementInput.y < 0)
+                    {
+                        animator.SetBool("isMovingDown", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("isMovingDown", false);
+                    }
+
+                    animator.SetBool("isMovingSide", success);
                 }
-                
-                animator.SetBool("isMoving", success);
-            } else {
-                animator.SetBool("isMoving", false);
+                else
+                {
+                    animator.SetBool("isMovingSide", false);
+                }
             }
 
             // Set direction of sprite to movement direction
@@ -52,6 +73,17 @@ public class PlayerController : MonoBehaviour
                 spriteRenderer.flipX = true;
             } else if (movementInput.x > 0) {
                 spriteRenderer.flipX = false;
+            }
+
+            if (movementInput.y > 0) {
+                animator.SetBool("isMovingUp", true);
+            } else {
+                animator.SetBool("isMovingUp", false);
+            }
+            if (movementInput.y < 0) {
+                animator.SetBool("isMovingDown", true);
+            } else {
+                animator.SetBool("isMovingDown", false);
             }
         }
     }

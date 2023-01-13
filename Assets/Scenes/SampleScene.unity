@@ -2844,40 +2844,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &967842669 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3231666262716486227, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
-  m_PrefabInstance: {fileID: 3231666264004796421}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &967842673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967842669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a552c1aee4ae04ea0d3b00c7f666b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  collisionOffset: 0.05
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  swordAttack: {fileID: 0}
 --- !u!1 &973671704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,7 +4399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3231666262716486237, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 3231666262716486237, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4467,19 +4433,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3613081702837235004, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: a107ed33b2c8cbd4b8c51206ff2dc52c, type: 3}
-    - target: {fileID: 3613081702837235004, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3231666262716486227, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 967842673}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fcf933aee3d5414591233b2ed80791b, type: 3}
