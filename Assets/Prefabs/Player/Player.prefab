@@ -131,23 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a552c1aee4ae04ea0d3b00c7f666b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationStrings: {fileID: 11400000, guid: 937062deec8aab14c8b97dfa88c7c163, type: 2}
   moveSpeed: 1
-  collisionOffset: 0.01
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  swordAttack: {fileID: 0}
+  moveDrag: 1
+  stopDrag: 5
 --- !u!50 &967842675
 Rigidbody2D:
   serializedVersion: 4
